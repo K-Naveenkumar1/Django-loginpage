@@ -5,8 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 </head>
+
+<style>
+        body {
+            font-family: Arial;
+            background: #e8eef5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
 <body>
-    <div>
+    <div class="container">
         <h2>welcome</h2>
         <h2>{{user.username}}</h2>
         <form method="POST" action="{% url 'logout' %}">
